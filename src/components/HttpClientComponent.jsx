@@ -3,15 +3,15 @@ import { useState } from "react";
 
 const HttpClientComponent = () => {
 
-    const [url, setUrl] = useState("");
+    const [reqUrl, setReqUrl] = useState("");
 
-    const [response, setResponse] = useState(null);
+    const [response, setResponse] = useState();
 
-    const handleUrlChange = (e) => setUrl(e.target.value);
+    const handleUrlChange = (e) => setReqUrl(e.target.value);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(url)
+        fetch(reqUrl)
             .then(response => response.json())
             .then(data => {
                 setResponse(data);
@@ -29,7 +29,19 @@ const HttpClientComponent = () => {
                         Request
                     </div>
                     <form onSubmit={handleSubmit}>
-                        <input type="text" value={url} onChange={handleUrlChange} />
+                        
+                        <select name="reqType" id="" >
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                        </select>
+                        <br />
+
+                        <input type="text" value={reqUrl} onChange={handleUrlChange} style={{"width": "80%",}} />
+                        <br />
+
+                        <textarea name="body" id="" cols="30" rows="10"/>
+                        <br />
+
                         <button type="submit">Request</button>
                     </form>
                 </div>
