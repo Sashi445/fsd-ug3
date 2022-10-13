@@ -2,11 +2,11 @@
 
 ### Backend
 
-![](./../images/1.png)
+![](https://drive.google.com/file/d/1AgiFPvZ_iOawcQzgCf5azLhhRdbv5QUS/view?usp=sharing)
 
 ### Mock Backend
 
-![](./../images/2.png)
+![](https://drive.google.com/file/d/1_0TTidlFyNnfQxjUnWEnkUvWaNWSjov9/view?usp=sharing)
 
 ---
 
